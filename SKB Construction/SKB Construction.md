@@ -1,3 +1,5 @@
+This table shows the correspondence between the relationship symbols used by Babelnet in their indexes and the name we have assigned them in the column "our_interpretation". Please note that some information has been interpreted in the opposite sense in our system w.r.t. BabelNet, as we have chosen to follow transitive relationships only in the direction that goes from specific to generic (loading `a part of b` whether it is `b has part a` in BabelNet).
+
 ```text
 |babelnet_symbol|babelnet_name                                   |our_interpretation                              |notes       |
 |---------------|------------------------------------------------|------------------------------------------------|------------|
