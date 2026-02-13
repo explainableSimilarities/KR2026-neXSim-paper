@@ -1,10 +1,10 @@
 UNWIND $ids AS id
 MATCH (s:Synset {id:id})
-CALL apoc.path.subgraphAll(s, {{
+CALL apoc.path.subgraphAll(s, {
   relationshipFilter: 'subclass_of>',
   uniqueness: 'RELATIONSHIP_GLOBAL',
   bfs: true
-}}) YIELD relationships
+}) YIELD relationships
 UNWIND relationships AS r
 WITH DISTINCT r
 where type(r) = 'subclass_of'
