@@ -1,0 +1,10 @@
+CALL db.index.fulltext.queryNodes("mainSensesAndSynonyms",
+apoc.text.format("{main_sense_str} OR {synonyms_str}", {params_str})) 
+YIELD node, score WITH node, score 
+ORDER BY score * node.undirected_edges DESC
+RETURN node.id as id, 
+node.mainSense as mainSense,
+node.description as description,
+node.synonyms as synonyms,
+node.type as type 
+SKIP {skip} LIMIT 10

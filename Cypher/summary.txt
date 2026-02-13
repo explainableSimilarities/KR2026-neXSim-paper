@@ -1,0 +1,29 @@
+UNWIND $ids as _id 
+MATCH (a:Synset {id:_id})
+CALL {
+    WITH a
+    MATCH (a)-[:is_a|instance_of]->(b:Synset)
+    RETURN DISTINCT a.id as for, a.id AS source, "is_a" AS relation, b.id AS target
+    UNION ALL
+    WITH a
+    MATCH (a)-[:subclass_of*1..]->(b:Synset)
+    RETURN DISTINCT a.id as for, a.id AS source, "is_a" AS relation, b.id AS target
+    UNION ALL
+    WITH a
+    MATCH (a)-[:instance_of]->(mid)-[:subclass_of*1..]->(b:Synset)
+    RETURN DISTINCT a.id as for, a.id AS source, "is_a" AS relation, b.id AS target
+    UNION ALL
+    WITH a
+    MATCH (a)-[:part_of*1..]->(b:Synset)
+    RETURN DISTINCT a.id as for, a.id AS source, "part_of" AS relation, b.id AS target
+    UNION ALL
+    WITH a
+    MATCH (a)-[r]->(b:Synset)
+    WHERE not type(r) in [
+    "instance_of",
+    "subclass_of",
+    "is_a",
+    "part_of" ]
+    RETURN DISTINCT a.id as for, a.id AS source, type(r) AS relation, b.id AS target   
+}
+RETURN DISTINCT for, source, relation, target;

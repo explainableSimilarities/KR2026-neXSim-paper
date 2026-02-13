@@ -1,0 +1,7 @@
+MATCH (x:Synset)
+WHERE x.id IN $ids
+RETURN x.id as id,
+x.mainSense as mainSense,
+x.description as description,
+x.synonyms as synonyms,
+x.type as type
