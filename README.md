@@ -29,7 +29,7 @@ The logic programs used in our system are located in the `Logic Programs` folder
 The `System` folder contains the link to the source code of our system, neXSim-v0.1-beta, which is available on GitHub. This codebase includes all the necessary components to run our system. For more details, please refer to the [System readme](./System/System.md).
 
 #### SKB (Selective Knowledge Base) Construction
-In the (`SKB Construction` folder) we provide a textual file called `Symbol To Relation Name.txt` inside of which there is the table matching the correspondence between the symbols in the BabelNet indices and the relation names we used in our SKB (`our interpretation` column). This mapping is crucial for understanding how we translated the BabelNet relations into our system.
+In the (`SKB Construction` folder) we provide a textual file called `Symbol To Relation Name.txt` [(also in markdown version)](./SKB%20Construction/SKB%20Construction.md) inside of which there is the table matching the correspondence between the symbols in the BabelNet indices and the relation names we used in our SKB (`our interpretation` column). This mapping is crucial for understanding how we translated the BabelNet relations into our system.
 
 ### References
 - [System's Source Code (neXSim-v0.1-beta)](https://github.com/explainableSimilarities/neXSim-v0.1-beta)
