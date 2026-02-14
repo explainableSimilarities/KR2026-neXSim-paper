@@ -8,7 +8,7 @@ This repository contains the materials related to our paper "neXSim: A Knowledge
 ├── Cypher                    # Cypher queries used to interact with the Neo4j graph database.
 ├── Experimental Data         # Experimental Results for both computation times and object sizes
 ├── Experimental Pipeline     # A description of the experimental pipeline used to evaluate our system.
-├── Logic Programs            # Logic programs encoding the rules for inferring least common neighbors for `is_a` and `part_of` relations
+├── Datalog Programs            # Datalog programs encoding the rules for inferring least common neighbors for `is_a` and `part_of` relations
 ├── SKB Construction          # Translation of BabelNet relations into our system's relation names
 └── System                    # System's Source Code (neXSim-v0.1-beta)
 ```
@@ -22,8 +22,8 @@ In the `Experimental Pipeline` folder (see [the corresponding readme](./Experime
 #### Experimental Data
 The experimental data (see [the corresponding readme](./Experimental%20Data/Experimental%20Data.md)) used in our system is located in the `Experimental Data` folder. This includes the datasets and any relevant files that were used for testing and validating our system's performance.
 
-#### Logic Programs 
-The logic programs used in our system are located in the `Logic Programs` folder. These programs encode the rules used to infer the least common neighbors for `is_a` and `part_of` relations. For any further details, please refer to the [Logic Programs readme](./Logic%20Programs/Logic%20Programs.md).
+#### Datalog Programs 
+The datalog programs used in our system are located in the `Datalog Programs` folder. These programs encode the rules used to infer the least common neighbors for `is_a` and `part_of` relations. For any further details, please refer to the [Datalog Programs readme](./Datalog%20Programs/Datalog%20Programs.md).
 
 #### System
 The `System` folder contains the link to the source code of our system, neXSim-v0.1-beta, which is available on GitHub. This codebase includes all the necessary components to run our system. For more details, please refer to the [System readme](./System/System.md).

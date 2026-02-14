@@ -1,6 +1,6 @@
-## Logic Programs
+## Datalog Programs
 
-In our system, we use logic programs to encode the rules for inferring the least common neighbors for `is_a` and `part_of` relations. These logic programs are essential for our system to compute the `Kernel Explanations`.
+In our system, we use datalog programs to encode the rules for inferring the least common neighbors for `is_a` and `part_of` relations. These programs are essential for our system to compute the `Kernel Explanations`.
 
 
 ```
